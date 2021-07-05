@@ -8,6 +8,5 @@ tempdir=$HOME/scratch/job$tpdir
 mkdir -p $tempdir
 cd $tempdir
 cp -R $PBS_O_WORKDIR/* .
-module load intel2016
 mpirun -n 1 vasp_std > log
 mv ../job$tpdir $PBS_O_WORKDIR/.

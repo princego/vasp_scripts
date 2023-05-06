@@ -1,6 +1,6 @@
 ## check whether energy is converged
 #!/bin/bash
-A='/path_to_directory'
+A='/path/to/directory'
 rm conv_en.csv
 for ((  n=1;  n<=5;  n++  ))
 do

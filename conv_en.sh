@@ -1,7 +1,7 @@
 ## Energy convergence (keep 5 energies in a seperate file named "enrgs")
 
 #!/bin/bash
-A='/home/prince/testing/bzo'
+A='/path/to/directory'
 for ((  n=1;  n<=5;  n++  ))
 do
     EN=`head -$n $A/enrgs | tail -1`

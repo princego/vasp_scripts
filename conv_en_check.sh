@@ -1,3 +1,4 @@
+## check whether energy is converged
 #!/bin/bash
 A='/path_to_directory'
 rm conv_en.csv

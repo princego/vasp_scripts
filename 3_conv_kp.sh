@@ -1,5 +1,5 @@
 #!/bin/bash
-A='/home/princeg/fuel_cell/BaZrO3/u_BaZrO3-5'
+A='/path/to/file'
 ENCUT=700
 for ((  n=1;  n<=9;  n++  ))
 do

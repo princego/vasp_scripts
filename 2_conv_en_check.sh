@@ -1,6 +1,6 @@
 #!/bin/bash
-A='/path/to/file'
-rm conv_en.csv
+A=`pwd`
+rm -f conv_en.csv
 for ((  n=1;  n<=6;  n++  ))
 do
     EN=`head -$n $A/enrgs | tail -1`
@@ -11,7 +11,7 @@ do
         totE=$(grep "free  energy   TOTEN" $A/e_$EN/OUTCAR|awk END{print}|awk '{print $5}')
         nions=$(grep NIONS $A/e_$EN/OUTCAR | awk '{print $12}')
         epa=$(echo "$totE / $nions" | bc -l)
-        echo "TOTEN:" $totE '|' "Energy_per_atom:" $epa
+#       echo "TOTEN:" $totE '|' "Energy_per_atom:" $epa
         echo $EN,$totE,$epa >> conv_en
 done
 
@@ -25,3 +25,5 @@ rm conv_en conv_en_diff
 #display on screen
 echo "---------"
 cat conv_en.csv
+
+gnuplot plot_en.gpl

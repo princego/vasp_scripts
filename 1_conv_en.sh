@@ -1,5 +1,5 @@
 #!/bin/bash
-A='/path/to/path'
+A=`pwd`
 for ((  n=1;  n<=6;  n++  ))
 do
         EN=`head -$n $A/enrgs | tail -1`

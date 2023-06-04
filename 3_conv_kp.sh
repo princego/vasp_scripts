@@ -1,6 +1,6 @@
 #!/bin/bash
-A='/path/to/file'
-ENCUT=700
+A=`pwd`
+ENCUT=700 #energy obtained from ENCUT convergence
 for ((  n=1;  n<=9;  n++  ))
 do
         KP=`head -$n $A/kpts | tail -1`

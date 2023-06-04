@@ -1,6 +1,6 @@
 #!/bin/bash
-A='/path/to/file'
-rm conv_kp.csv
+A=`pwd`
+rm -f conv_kp.csv
 for ((  n=1;  n<=9;  n++  ))
 do
     KP=`head -$n $A/kpts | tail -1`
@@ -11,7 +11,7 @@ do
         totE=$(grep "free  energy   TOTEN" $A/k_$KP/OUTCAR|awk END{print}|awk '{print $5}')
         nions=$(grep NIONS $A/k_$KP/OUTCAR | awk '{print $12}')
         epa=$(echo "$totE / $nions" | bc -l)
-        echo "TOTEN:" $totE '|' "Energy_per_atom:" $epa
+#       echo "TOTEN:" $totE '|' "Energy_per_atom:" $epa
         echo $KP,$totE,$epa >> conv_kp
 done
 
@@ -25,3 +25,5 @@ rm conv_kp conv_kp_diff
 #display on screen
 echo "---------"
 cat conv_kp.csv
+
+gnuplot plot_kp.gpl

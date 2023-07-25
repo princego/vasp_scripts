@@ -26,5 +26,5 @@ rm conv_kp conv_kp_diff
 echo "---------"
 cat conv_kp.csv
 
-#plotting KPOINTS convergence
+#plotting KPOINT convergence
 gnuplot plot_kp.gpl

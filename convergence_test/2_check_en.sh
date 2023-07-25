@@ -25,3 +25,6 @@ rm conv_en conv_en_diff
 #display on screen
 echo "---------"
 cat conv_en.csv
+
+#plotting energy convergence
+gnuplot plot_en.gpl

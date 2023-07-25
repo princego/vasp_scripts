@@ -17,4 +17,4 @@ The directory needs the following files:
 ### Additional tips:
 - If you are checking energy convergence for 5 energies, then in the `1_conv_en.sh` file line 3, the loop should run from 1 to 5. <br>
 - After performing energy convergence for 5 energies, but still didn't reach convergence, then add the 6th energy to the 6th row in `enrgs` file, then in the `1_conv_en.sh` file line 3, the loop should run from 6 to 6. This will submit just one job.
-- Depending on the number of times the loop is run in `1_conv_en.sh`, the same number of loops should be in `2_check_en.sh`. The same applies to kpoint convergence also.
+- Depending on the number of times the loop is run in `1_conv_en.sh`, the same number of loops should be in `2_check_en.sh` (If total 6 calculations were done for energy convergence, then the loop of `2_check_en.sh` should run from 1 to 6). The same applies to kpoint convergence also.

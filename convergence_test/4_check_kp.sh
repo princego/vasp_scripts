@@ -25,3 +25,6 @@ rm conv_kp conv_kp_diff
 #display on screen
 echo "---------"
 cat conv_kp.csv
+
+#plotting KPOINTS convergence
+gnuplot plot_kp.gpl
